@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/styles/sn.css">
+  </head>
+  <body>
+    <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/IDSNlogo.png" width="200" height="200">
+    <h1>Hands-on Lab : Getting Started with Watson Studio</h1>
+    <p><strong>Estimated time needed:</strong> 20 minutes</p>
+    <p>IBM Watson Studio provides you with the environment and tools to solve problems by collaboratively working with data. You can choose the tools you need to analyze and visualize data, to cleanse and shape data, to ingest streaming data, or to create and train machine learning models.</p>
+    <h1>Software Used in this Lab</h1>
+    <p>In this lab, you will get started with IBM Watson Studio Lite plan service through IBM Cloud as this is available at no charge for 1 authorized user with 50 capacity unit-hours monthly limit. Lite plan services are deleted after 30 days of inactivity.</p>
+    <h1>Objectives</h1>
+    <p>After completing this lab, you will be able to:</p>
+    <ul>
+      <li>Create an Instance of Watson Studio</li>
+      <li>Login to IBM Cloud Pak for Data to use Watson Studio</li>
+      <li>Creating a Project</li>
+      <li>Adding a Jupyter Notebook to the Project</li>
+    </ul>
+    <h1>Exercise 1: Create an Instance of Watson Studio/ Login to IBM Cloud Pak for Data to use Watson Studio</h1>
+    <p>In this exercise, you will create an instance of Watson Studio and login to IBM Cloud Pak for Data to use Watson Studio.</p>
+    <h2>Task A: Create an Instance of Watson Studio</h2>
+    <ol>
+      <li>
+        <p><a href="https://cloud.ibm.com/catalog/services/watson-studio?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBM-DA0321EN-SkillsNetwork-21426264&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">Click here</a> to go to the IBM Cloud Watson Studio service instance creation page.</p>
+      </li>
+      <li>
+        <p>Select <strong>Lite</strong> plan and click <strong>Sign up to create</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/1.A.2.png" width="917" height="550">
+      </li>
+    </ol><br>
+    <ol start="3">
+      <li>
+        <ul>
+          <li>If you don't have an IBM Cloud account, fill out section 1,2 and 3 under <strong>Create an account</strong> and click <strong>Create account</strong>.</li>
+          <li>If you already have an IBM Cloud account, click <strong>Login in</strong> and enter your IBMid and password.</li>
+        </ul>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/1.A.3.png" width="920" height="550">
+      </li>
+    </ol><br>
+    <ol start="4">
+      <li>
+        <p>You will be redirected back to Watson Studio instance creation page. <strong>Select a region</strong> matching the region of your IBM Cloud account. Click <strong>Create</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/1.A.4.png" width="920" height="550">
+      </li>
+    </ol><br>
+    <ol start="5">
+      <li>
+        <p>You have successfully created Watson Studio service instance. Click <strong>Get Started</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/1.A.5.png" width="950" height="550">
+      </li>
+    </ol><br>
+    <ol start="6">
+      <li>
+        <p>You will be redirected to <strong>IBM Cloud Pak for Data page</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/1.A.6.png" width="950" height="550">
+      </li>
+    </ol><br>
+    <h2>Task B: Login to IBM Cloud Pak for Data to use Watson Studio</h2>
+    <ul>
+      <li><strong><ins>If you just completed Task A, you will already be logged in, so skip Task B.</ins></strong></li>
+    </ul>
+    <ol>
+      <li>
+        <p>Go to <a href="https://dataplatform.cloud.ibm.com?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBM-DA0321EN-SkillsNetwork-21426264&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">dataplatform.cloud.ibm.com</a>.</p>
+      </li>
+      <li>
+        <p>Enter your <strong>IBMid</strong>(<ins>the email ID you used to sign up for IBM Cloud</ins>), <strong>password</strong> and select a <strong>region</strong>, same one you used during Watson Studio service instance creation.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/1.B.2.png" width="400" height="560">
+      </li>
+    </ol><br>
+    <ol start="3">
+      <li>
+        <p>Click <strong>Go to IBM Cloud Pak for Data</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/1.B.3.png" width="620" height="400">
+      </li>
+    </ol><br>
+    <ol start="4">
+      <li>
+        <p>You have successfully logged in to the IBM Cloud Pak for Data platform.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/1.B.4.png" width="865" height="500">
+      </li>
+    </ol><br>
+    <h1>Exercise 2: Creating a Project</h1>
+    <p>In this exercise, you will create a project.</p>
+    <ol>
+      <li>
+        <p>On the IBM Cloud Pak for Data welcome page, click <strong>Create a project</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/2.1.png" width="471" height="300">
+      </li>
+    </ol><br>
+    <ol start="2">
+      <li>
+        <p>Click <strong>Create an empty project</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/2.2.png" width="1145" height="300">
+      </li>
+    </ol><br>
+    <ol start="3">
+      <li>
+        <p>Write <strong>Capstone Project</strong> as name of the project and click <strong>Add</strong> on Select storage service if no storage service appears. <ins>If a storage appears, proceed to step 6 directly</ins>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/2.3.png" width="938" height="300">
+      </li>
+    </ol><br>
+    <ol start="4">
+      <li>
+        <p>You will be redirected to a new page. On the <strong>Create</strong> tab, select <strong>Lite</strong> plan. Then click <strong>Create</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/2.4.png" width="862" height="500">
+      </li>
+    </ol><br>
+    <ol start="5">
+      <li>
+        <p>Now you will be redirected to the previous new project page. Click <strong>Refresh</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/2.5.png" width="938" height="300">
+      </li>
+    </ol><br>
+    <ol start="6">
+      <li>
+        <p>Once you see a storage service, click <strong>Create</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/2.6.png" width="867" height="500">
+      </li>
+    </ol><br>
+    <ol start="7">
+      <li>
+        <p>You have successfully created a project. Click <strong>IBM Cloud Pak for Data</strong> at the top left to go back to homepage.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/2.7.png" width="997" height="350">
+      </li>
+    </ol><br>
+    <h1>Exercise 3: Adding a Jupyter Notebook to the Project</h1>
+    <p>In this exercise, you will add an IPYNB Jupyter notebook to the Project you created.</p>
+    <ol>
+      <li>
+        <p>From IBM Cloud Pak for Data homepage, click <strong>Projects</strong> under Quick navigation.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/3.1.png" width="581" height="400">
+      </li>
+    </ol><br>
+    <ol start="2">
+      <li>
+        <p>Select <strong>Capstone Project</strong> you created earlier.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/3.2.png" width="530" height="300">
+      </li>
+    </ol><br>
+    <ol start="3">
+      <li>
+        <p>On the <strong>Overview</strong> page of Capstone Project project, click <strong>Add to project</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/3.3.png" width="1160" height="200">
+      </li>
+    </ol><br>
+    <ol start="4">
+      <li>
+        <p>Select <strong>Notebook</strong>.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/3.4.png" width="673" height="350">
+      </li>
+    </ol><br>
+    <ol start="5">
+      <li>
+        <ul>
+          <li>
+            <p>Right-click on this <a href="https://cocl.us/DA0321EN-sample-jupyter-notebook.ipynb" target="_blank" rel="external">link</a> and copy the link address of the sample Jupyter notebook.</p>
+          </li>
+          <li>
+            <p>Under <strong>From URL</strong> tab, name the Notebook as <strong>Sample Jupyter Notebook</strong>. Then paste the link of the sample Jupyter notebook to <strong>Notebook URL</strong> you just copied.</p>
+          </li>
+        </ul>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/3.5.png" width="950" height="550">
+      </li>
+    </ol><br>
+    <ol start="6">
+      <li>
+        <p>Wait until the notebook gets uploaded and become ready.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/3.6.png" width="585" height="300">
+      </li>
+    </ol><br>
+    <ol start="7">
+      <li>
+        <p>You have successfully added a Jupyter Notebook to the Project and opened it using Watson Studio. To share the notebook using permalink, click on the <strong>Share</strong> icon.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/3.7.png" width="950" height="550">
+      </li>
+    </ol><br>
+    <ol start="8">
+      <li>
+        <p>Click on the <strong>toggle button</strong> to turn on "Share with anyone who has the link". Select <strong>All content, including code</strong> from Cell content. Click on the <strong>copy link</strong> icon to copy the "Permalink to view notebook" and share the link if you need to share your work on the notebook. This link always points to the most recent saved version of the notebook.</p>
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/labs/module%201/Lab%20-%20Getting%20Started%20with%20Watson%20Studio/images/3.8.png" width="667" height="450">
+      </li>
+    </ol><br>
+    <h3>Congratulations! You have completed this Lab.</h3>
+    <h3></h3>
+    <h1>Author</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/sandipsahajoy?cm_mmc=Email_Newsletter-_-Developer_Ed%2BTech-_-WW_WW-_-SkillsNetwork-Courses-IBM-DA0321EN-SkillsNetwork-21426264&#x26;cm_mmca1=000026UJ&#x26;cm_mmca2=10006555&#x26;cm_mmca3=M12345678&#x26;cvosrc=email.Newsletter.M12345678&#x26;cvo_campaign=000026UJ" target="_blank" rel="external">Sandip Saha Joy</a></li>
+    </ul>
+    <h1>Other Contributor(s)</h1>
+    <ul>
+      <li></li>
+    </ul>
+    <h1>Changelog</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Version</th>
+          <th>Changed by</th>
+          <th>Change Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2020-10-23</td>
+          <td>1.0</td>
+          <td>Sandip Saha Joy</td>
+          <td>Initial version created</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2></h2>
+    <h3 align="center">© IBM Corporation 2020. All rights reserved.</h3>
+    <h3></h3>
+    <script>window.addEventListener('load', function() {
+snFaculty.inject();
+});</script>
+    <script src="https://skills-network-assets.s3.us.cloud-object-storage.appdomain.cloud/scripts/inject.min.js"></script>
+  </body>
+</html>
